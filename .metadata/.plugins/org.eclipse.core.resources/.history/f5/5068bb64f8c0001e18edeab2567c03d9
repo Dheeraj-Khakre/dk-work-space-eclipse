@@ -1,0 +1,13 @@
+package com.dk.springboot.controller;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController // restController = Controller + Responsebody
+public class HomeController {
+	
+	public String  m1() {
+		 
+		
+	}
+
+}

@@ -1,0 +1,36 @@
+package DateTimeApi;
+
+import java.sql.*;
+
+
+
+
+public class Date_Time_Demo {
+	public static void main(String[] args) {
+
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/dk","root","zxcvbnm#321");
+			String sql = "insert into person values(?,?,?,?)";
+           PreparedStatement ps = con.prepareStatement(sql);
+           ps.setString(1, "dheeraj mid");
+			ps.setInt(2, 21);
+			// ps.setString(3,number);
+			ps.setString(3, "abc2@gmail.com");
+			ps.setString(4, "sdfgwert");
+			int x = ps.executeUpdate();
+			ps.close();
+			con.close();
+			if (x > 0)
+				System.out.print(" person data added succefully");
+			else {
+				System.out.println(" person data not added");
+			}
+		} catch (Exception e) {
+
+            e.getStackTrace();
+		}
+
+	}
+
+}

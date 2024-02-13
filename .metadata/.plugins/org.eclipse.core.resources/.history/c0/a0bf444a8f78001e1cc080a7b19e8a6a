@@ -1,0 +1,26 @@
+package dk;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.GenericServlet;
+import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+
+public class InputServlet extends GenericServlet{
+
+	@Override
+	public void service(ServletRequest arg0, ServletResponse arg1) throws ServletException, IOException {
+
+
+		String name = agr0.getParameter("name");
+		String age = agr0.getParameter("age");
+		 PrintWriter out = response.getWriter();
+         arg1.setContentType("text/html");
+         out.print("<h1> hello dk mid night sky </h1>");
+         out.print("<h1>name = "+name+" </h1>");
+         out.print("<h1>age = "+age+" </h1>"); 
+	}
+
+}

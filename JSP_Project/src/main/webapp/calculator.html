@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<form action="calculator.jsp">
+		 
+		 <div>
+			 enter number : <input type="number" name="n1" required >
+		 </div>
+		  <div>
+			 enter number : <input type="number" name="n2"required>
+		 </div>
+		  <div>
+			 output  : <input type="number" name="n2" value="<%=ans%>"disabled>
+		 </div>
+		  <div>
+			  <input type="radio" name="oper" value="+">addition
+		 </div>
+		  <div>
+			  <input type="radio" name="oper" value="-">subtraction
+		 </div> <div>
+			  <input type="radio" name="oper" value="*">multiplication
+		 </div> <div>
+			  <input type="radio" name="oper" value="/">division
+		 </div>
+		  <div>
+			  <input type="submit">
+		 </div>
+		
+	</form>
+
+</body>
+</html>

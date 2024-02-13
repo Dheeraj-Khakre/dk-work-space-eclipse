@@ -1,0 +1,21 @@
+package com.dk.Hibernate_Session;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+import Table_Schama.Employee;
+
+public class Fetching_data {
+	
+	public static void main(String[] args) {
+
+		SessionFactory factory = new Configuration().configure().buildSessionFactory();
+		Session session = factory.openSession();
+	 Employee e=(Employee)session.get(Employee.class, 1);
+		
+		  
+	}
+	     
+
+}

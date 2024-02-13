@@ -1,0 +1,62 @@
+<%@page import="com.foodapp.entities.User"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.foodapp.entities.Product"%>
+<%@page import="java.util.List"%>
+<%@page import="org.springframework.web.bind.annotation.ModelAttribute"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>View All Product for User</title>
+<%@ include file="All_CSS_Script.jsp"%>
+</head>
+<body>
+
+	<header>
+		<div class="hblock">
+			<div class="hblock1">
+				<a class="logo" href=""><img
+					src="https://th.bing.com/th/id/OIP.fZ3hKqoUZR2oVxUMxfh4RQHaEK?w=297&h=180&c=7&r=0&o=5&pid=1.7"
+					class="logo"></a>
+				<div class="hblock1">
+					<input type="search" placeholder="Enter your location" /> <img
+						id="s"
+						src="https://th.bing.com/th?q=Food+Logo+HD&w=120&h=120&c=1&rs=1&qlt=90&cb=1&pid=InlineBlock&mkt=en-IN&cc=IN&setlang=en&adlt=moderate&t=1&mw=247">
+				</div>
+				<%
+				User u = (User) session.getAttribute("user");
+				%>
+
+			</div>
+			<ul class="hblock2">
+				<li class="hitem"><a class="order"
+					href="orderfood?id=<%=u.getId()%>">Order Food</a></li>
+				<li class="hitem"><a class="order" href="">Search</a></li>
+
+
+				<li class="hitem"><a class="order" href="">Offers</a></li>
+				<li class="hitem"><a class="order" href="">Help</a></li>
+				<li class="hitem"><a class="order" href="">Cart</a></li>
+
+				<li class="hitem"><a class="order" id="username"
+					href="userinfo?id=<%=u.getId()%>"> <%=u.getName()%></a></li>
+
+
+			</ul>
+		</div>
+	</header>
+	<nav class="navbar navbar-dark bg-dark">
+		<div class="container-fluid">
+			<form class="d-flex">
+				<input id="search-bar" class="form-control me-2" type="search"
+					placeholder="Search Produt  here" aria-label="Search">
+				<button class="btn btn-outline-success text-white bg-success"
+					type="submit">Search</button>
+			</form>
+		</div>
+	</nav>
+
+</body>
+</html>

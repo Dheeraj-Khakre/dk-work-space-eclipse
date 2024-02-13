@@ -1,0 +1,6 @@
+#Tue Jan 23 14:20:15 IST 2024
+__DEFAULT__=false
+expression=server editer
+org.eclipse.help.ui.localSearch.master=true
+org.eclipse.sdk.Eclipse.master=true
+org.eclipse.sdk.Google.master=true

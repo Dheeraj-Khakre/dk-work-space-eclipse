@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+       <h2>
+		   hello this is dk mid  night sky 
+		  
+       
+		    
+		    <form action="DK">
+				  <label > enter your name here:  </label>
+				 <input type="text" value="name" >
+				 <label > enter your name here:  </label>
+				 <input type="text" value="age" >
+				 
+				<input type="button" value="submit">
+				
+			</form>
+	   </h2>
+      
+</body>
+</html>

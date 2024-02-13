@@ -1,0 +1,31 @@
+package com.dk.springboot.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.dk.springboot.entities.Student;
+import com.dk.springboot.repository.StudentRepository;
+
+@RestController
+public class StudentController {
+	
+
+	@Autowired
+	StudentRepository sr;
+	
+	@PostMapping("/save")
+	public String saveStudent(@RequestBody Student student) {
+		sr.save(student);
+		return "data Added successfully";
+	}
+
+	@GetMapping("/getstudent")
+	public String fetchStudent() {
+		return sr.findById(101).toString();
+		
+	}
+
+}

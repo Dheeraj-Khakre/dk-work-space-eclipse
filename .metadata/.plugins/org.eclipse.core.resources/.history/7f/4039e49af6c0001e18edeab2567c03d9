@@ -1,0 +1,4 @@
+server.port=8080
+spring.mvc.view.prefix=/jspview/
+spring.mvc.view.suffix=.jsp
+

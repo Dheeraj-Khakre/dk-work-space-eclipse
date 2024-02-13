@@ -1,0 +1,5 @@
+package com.dk.springboot.helper;
+
+public class ResponseStructure {
+
+}

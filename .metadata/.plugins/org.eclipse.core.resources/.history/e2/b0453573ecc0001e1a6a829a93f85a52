@@ -1,0 +1,16 @@
+package com.dk.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+@Controller
+public class SpringController {
+
+	@GetMapping("/test")
+	@ResponseBody
+	public String demo() {
+		
+		return "this is the demo testing of Spring boot project";
+	}
+}

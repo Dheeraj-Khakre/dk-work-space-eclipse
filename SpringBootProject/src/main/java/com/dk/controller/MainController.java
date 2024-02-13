@@ -1,0 +1,24 @@
+package com.dk.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RequestParam;
+
+
+@Controller
+public class MainController {
+
+	@GetMapping("/")
+//	@ResponseBody
+	public String  demo() {
+		return "home";
+		
+	}
+	@GetMapping("/homepage")
+	public String getHomePage() {
+		return "HomePage";
+	}
+	
+	  
+}
